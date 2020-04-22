@@ -43,8 +43,7 @@
     <div class="box-topo">
         <div class="box-functions">
             <div class="row">
-                <div class="col s6"><i class="material-icons left">people</i><h4>Cliente</h4></div>
-                <div class="col s6"></div>
+                <div class="col s12"><i class="material-icons left">people</i><h4>Cliente</h4></div>
             </div>
         </div>
     </div>
@@ -69,8 +68,7 @@
     <div class="box-topo">
         <div class="box-functions">
             <div class="row">
-                <div class="col s6"><i class="material-icons left">attach_money</i><h4>Maior Compra</h4></div>
-                <div class="col s6"></div>
+                <div class="col s12"><i class="material-icons left">attach_money</i><h4>Maior Compra</h4></div>
             </div>
         </div>
     </div>
@@ -95,8 +93,7 @@
     <div class="box-topo">
         <div class="box-functions">
             <div class="row">
-                <div class="col s6"><i class="material-icons left">attach_money</i><h4>Maior Compra</h4></div>
-                <div class="col s6"></div>
+                <div class="col s12"><i class="material-icons left">attach_money</i><h4>Compras Realizadas</h4></div>
             </div>
         </div>
     </div>
