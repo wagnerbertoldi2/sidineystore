@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginJwtController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/comprasRealizadas.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/functios.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/listaClientes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/maiorCompra.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/js/sugestao.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/auth/login.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/auth/login.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/routes/api.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/routes/web.php" charset="UTF-8" />
+  </component>
+</project>

@@ -42,6 +42,7 @@ class ApiController extends Controller{
             $i = 0;
             foreach ($clientes as $c) {
                 $clientes[$i]->valorTotal= $this->getFormatNumber($c->valorTotal, 2);
+                $i++;
             }
         }
 
