@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginJwtController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/ImportacaoController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/comprasRealizadas.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/functios.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/js/listaClientes.js" charset="UTF-8" />

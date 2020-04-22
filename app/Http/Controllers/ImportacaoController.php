@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Model\CompraItemModel;
 use App\Model\CompraModel;
+use App\Model\ParametrosModel;
 use App\Model\ProdutoModel;
 use App\Model\ProdutoTamanhoModel;
 use App\Model\ProdutoMarcaModel;
@@ -18,15 +19,19 @@ class ImportacaoController extends Controller{
     private $compras;
     private $hashCompras;
     private $hashImportacaoCompras;
+    private $parametros;
 
     public function __construct() {
-        $this->clientes= json_decode(file_get_contents(env('APP_BASE_CLIENTE')), true);
-        $this->hashCliente= md5(file_get_contents(env('APP_BASE_CLIENTE')));
+        $BASE_CLIENTE= ParametrosModel::where('parametro','BASE_CLIENTE')->where('status','1')->first()->valor;
+        $BASE_COMPRA= ParametrosModel::where('parametro','BASE_COMPRA')->where('status','1')->first()->valor;
+
+        $this->clientes= json_decode(file_get_contents($BASE_CLIENTE), true);
+        $this->hashCliente= md5(file_get_contents($BASE_CLIENTE));
         $this->hashImportacaoCliente= ImportacaoModel::where('tipo','cliente')->orderBy('created_at','desc')->first();
         $this->hashImportacaoCliente= $this->hashImportacaoCliente != null ? $this->hashImportacaoCliente->hash : '';
 
-        $this->compras= (json_decode(file_get_contents(env('APP_BASE_COMPRA')), true));
-        $this->hashCompras= md5(file_get_contents(env('APP_BASE_COMPRA')));
+        $this->compras= (json_decode(file_get_contents($BASE_COMPRA), true));
+        $this->hashCompras= md5(file_get_contents($BASE_COMPRA));
         $this->hashImportacaoCompras= ImportacaoModel::where('tipo','compra')->orderBy('created_at','desc')->first();
         $this->hashImportacaoCompras= $this->hashImportacaoCompras != null ? $this->hashImportacaoCompras->hash : '';
     }

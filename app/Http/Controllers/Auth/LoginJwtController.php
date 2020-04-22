@@ -12,11 +12,11 @@ class LoginJwtController extends Controller{
 
         if(!$token = auth('api')->attempt($credentials)){
             return response()->json(['message'=>'Unauthorized'], 401);
+        } else {
+            return response()->json([
+                'token' => $token
+            ]);
         }
-
-        return response()->json([
-            'token'=> $token
-        ]);
     }
 
     public function logout(){

@@ -23,8 +23,12 @@ $(document).ready(function(){
                 }
             })
             .then(function (response) {
-                localStorage.setItem('token', response.data.token);
-                window.open('/home', '_self');
+                if(response.data.token != undefined) {
+                    localStorage.setItem('token', response.data.token);
+                    window.open('/home', '_self');
+                } else {
+                    M.toast({html: 'Erro ao autenticar'});
+                }
             })
             .catch(function (error) {
                 M.toast({html: 'Não foi possível autenticar, verifique as credenciais informadas.'});
