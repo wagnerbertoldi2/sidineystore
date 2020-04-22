@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url(../imagens/bg-login.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.box-login{
+    position: relative;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    width: 40%;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.box-login-mg {
+    padding: 20px 30px;
+}
+
+.txt-logo{
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 20px;
+}
+
+.btn-large{ width: 100%; }
+
+input{ color: #000; background: none;}
+
+@media only screen and (max-width: 768px) {
+    .box-login {
+        width: 95%;
+    }
+}
