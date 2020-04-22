@@ -1,72 +1,56 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<h2>Sidiney Store</h2>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p>Este projeto foi desenvolvido para teste de vaga de emprego, foram utilizados o laravel 5.8, html5, jquery, javascript, jwt, materialize css e axios.</p>
+<hr /><br />
+<b>Etapas para Instalação do Projeto:</b>
+<ol>
+    <li>Executar no local desejado o comando git: <br /> <u>git clone https://github.com/wagnerbertoldi2/sidineystore.git</u></li>
+    <li>Executar a copia do arquivo .env.example para .env</li>
+    <li>Executar o comando: <br /> <u>php artisan key:generate</u></li>
+    <li>Executar o comando: <br /> <u>php artisan jwt:secret</u></li>
+    <li>Alterar no no arquivo .env as seguintes configurações: <br />
+        <ul>
+            <li>APP_URL => colocar a url conforme o dominio ou ip do servidor</li>
+            <li>DB_HOST => host do banco de dados</li>
+            <li>DB_PORT => porta do banco de dados</li>
+            <li>DB_DATABASE => nome do banco de dados</li>
+            <li>DB_USERNAME => usuário do banco de dados</li>
+            <li>DB_PASSWORD => senha do banco de dados</li>
+            <li>APP_DEBUG => se for colocar em produção, troque para false</li>
+        </ul>
+    </li>
+    <li>Crie as tabelas do banco de dados, conforme estão no er => <u>database/er/er_loja.mwb</u></li>
+    <li>Na tabela de parametros crie os seguintes parametros:
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>parametro</th>
+                    <th>valor</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>IMPORTACAO</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>BASE_CLIENTE</td>
+                    <td>https://www.mocky.io/v2/5de67e9f370000540009242b</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>BASE_COMPRA</td>
+                    <td>https://www.mocky.io/v2/5e960a2d2f0000f33b0257c4</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </li>
+    <li>Execute o comando: <u>php artisan config:cache</u></li>
+    <li>Se não estiver utilizando um servidor apache, pode executar o comando <u>php artisan serve</u>, que o mesmo executa um servidor para rodar o projeto, mas é necessario ter o composer, php e mysql instalados na máquina.</li>
+</ol>
+<hr />
+Desenvolvido por Wagner Bertoldi<br />
+Abril/2020
