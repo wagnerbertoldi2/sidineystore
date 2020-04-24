@@ -24,14 +24,16 @@ class ImportacaoController extends Controller{
     public function __construct() {
         $BASE_CLIENTE= ParametrosModel::where('parametro','BASE_CLIENTE')->where('status','1')->first()->valor;
         $BASE_COMPRA= ParametrosModel::where('parametro','BASE_COMPRA')->where('status','1')->first()->valor;
+        $arqCliente= file_get_contents($BASE_CLIENTE);
+        $arqCompra= file_get_contents($BASE_COMPRA);
 
-        $this->clientes= json_decode(file_get_contents($BASE_CLIENTE), true);
-        $this->hashCliente= md5(file_get_contents($BASE_CLIENTE));
+        $this->clientes= json_decode($arqCliente, true);
+        $this->hashCliente= md5($arqCliente);
         $this->hashImportacaoCliente= ImportacaoModel::where('tipo','cliente')->orderBy('created_at','desc')->first();
         $this->hashImportacaoCliente= $this->hashImportacaoCliente != null ? $this->hashImportacaoCliente->hash : '';
 
-        $this->compras= (json_decode(file_get_contents($BASE_COMPRA), true));
-        $this->hashCompras= md5(file_get_contents($BASE_COMPRA));
+        $this->compras= (json_decode($arqCompra, true));
+        $this->hashCompras= md5($arqCompra);
         $this->hashImportacaoCompras= ImportacaoModel::where('tipo','compra')->orderBy('created_at','desc')->first();
         $this->hashImportacaoCompras= $this->hashImportacaoCompras != null ? $this->hashImportacaoCompras->hash : '';
     }
